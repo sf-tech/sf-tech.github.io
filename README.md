@@ -1,2 +1,3 @@
-# sf-tech.github.io
-SF Tech drysuit website
+# SF Tech Drysuits
+
+Main website for the company
