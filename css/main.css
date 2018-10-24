@@ -93,7 +93,6 @@ abbr[title] {
   text-decoration: underline;
   /* 2 */
   -webkit-text-decoration: underline dotted;
-     -moz-text-decoration: underline dotted;
           text-decoration: underline dotted;
   /* 2 */ }
 
@@ -530,12 +529,8 @@ p {
 
 @media screen and (min-width: 1120px) {
   .menu {
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+    justify-content: center; }
   .menu__icon {
     display: none; }
   .menu__link {
@@ -543,8 +538,6 @@ p {
     padding-bottom: 0;
     text-transform: uppercase; }
   .menu__list {
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     position: static; }
   .menu__item,
@@ -663,27 +656,15 @@ p {
     line-height: 1em;
     height: 60px;
     padding: 0;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+    align-items: center;
+    justify-content: center; }
   .nav-list {
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     position: static;
     background: none;
-    -webkit-align-items: flex-end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: flex-end;
+    justify-content: center;
     height: auto; }
   .nav-item {
     position: relative;
@@ -807,15 +788,9 @@ p {
   margin-bottom: 3em;
   background-position: center;
   background-size: cover;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-align-items: flex-end;
-      -ms-flex-align: end;
-          align-items: flex-end; }
+  justify-content: flex-start;
+  align-items: flex-end; }
 
 .hero-inner h1 {
   color: black;
@@ -825,8 +800,6 @@ p {
 
 .slideshow {
   position: relative;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   height: 120vw;
   /* 1 */
@@ -843,15 +816,9 @@ p {
 
 .slideshow__inner {
   position: relative;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   padding: global-padding; }
 
 .slideshow__title {
@@ -877,15 +844,9 @@ p {
   margin-bottom: 1rem; }
 
 .content-image {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  align-items: center;
+  justify-content: center; }
 
 .content-image img {
   width: 100%; }
@@ -897,8 +858,6 @@ p {
   .content {
     max-width: 70em; }
   .content-inner {
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex; }
   .content-text {
     max-width: 34em;
@@ -913,8 +872,6 @@ p {
   left: 10px; }
 
 .breadcrumbs__list {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   text-transform: uppercase; }
 
@@ -964,18 +921,8 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  flex-direction: column; }
 
 .card--homepage {
   min-height: 200px; }
@@ -995,10 +942,12 @@ p {
   z-index: -1;
   position: absolute;
   /* 1 */
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   /* 2 */ }
 
 .card-inner {
+  margin: auto;
   font-size: 1.8rem;
   line-height: 1em;
   text-align: center;
@@ -1023,12 +972,8 @@ p {
 
 .copyright-container {
   padding: 1rem;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  justify-content: center; }
 
 .copyright-logo img {
   height: 100px; }
