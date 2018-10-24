@@ -25,7 +25,6 @@ $(document).ready(function() {
 	nav.find(".js-menu-icon").click(function(){
 
 		// if the button is active,
-		//	- change the icon
 		//	- remove all the active elements
 		if ($(this).hasClass("is-active")) {
 			nav.find(".is-active").removeClass("is-active");
@@ -42,9 +41,25 @@ $(document).ready(function() {
 
 	// when a link is clicked
 	nav.children('ul').find('a').click(function(){
-  	// display the submenu
-  	$(this).siblings().toggleClass("is-active");
-  	nav.find(".js-menu-back").addClass("is-active");
+
+		// if link is not active
+		if (!$(this).siblings().hasClass("is-active")) {
+
+			// hide all other submenu
+  		nav.children("ul").find(".is-active").removeClass("is-active");
+
+  		// display the submenu
+  		$(this).siblings().addClass("is-active");
+
+  		// display the back button
+  		nav.find(".js-menu-back").addClass("is-active");
+		}
+
+		else { // link is active
+			// hide all active elements	
+  		nav.find(".is-active").removeClass("is-active")
+		}
+
   });
 
 	// when the back button is pressed
@@ -66,9 +81,9 @@ $(document).ready(function() {
 			container.find(".is-active").removeClass("is-active");
 		}
 	});
-
-
-
-
-
 });  
+
+var fixed = document.getElementById('mainNav');
+fixed.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+}, false);
