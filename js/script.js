@@ -1,11 +1,36 @@
 $(document).ready(function() {
 
+	// Option viewer
+	// -------------------------------------------------------
+
+  // The list of focus and the list of parts should be in the 
+  // same order for the process to work.
+  // It all works with the index of element in the DOM
+
+	var object = $("#custom");
+
+  // When a icon element is clicked
+  object.children().on('click','i', function(){
+	  // Remove the 'is-active' class from all elements to the siblings'
+	  object.find('.is-active').removeClass('is-active');
+	  // Add class 'is-active' to the element
+	  $(this).addClass('is-active');
+
+	  // Get the index of the element clicked
+	  // var n = $(this).index('.opt-focus');
+
+	  // Add class to the corresponding element of the part section
+		object.find('.js-part').eq( $(this).index('.js-focus') ).addClass("is-active");
+	});
+
+
+
+
 	// Display th elements of the menu	
-	// -------------------------------------------------------	-
+	// -------------------------------------------------------
 		$(window).on('scroll', function () {
 	    var scrollTop = $(window).scrollTop();
 	    if (scrollTop > 200) {
-	    	console.log(scrollTop)
 	        $("#logo").addClass("is-scroll");
 	    }
 	    else {
@@ -15,7 +40,7 @@ $(document).ready(function() {
 
 
 
-	// Display th elements of the menu
+	// Display the elements of the menu
 	// --------------------------------------------------------
 
 	// get the ID of the navigation
