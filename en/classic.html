@@ -336,12 +336,13 @@
   ------------------------------------------------------------------>
  <section class="section dark-overlay"
           style="background-image: url('../img/png/shark.png')">
-  <div class="wrapper ">
-      <div class="custom-title">
-        <h3>customize your suit</h3>
-      </div>
-    <div class="custom" id="custom">  
-      <div class="custom-image"
+  <div class="wrapper">
+     <div class="custom-title">
+       <h3>customize your suit</h3>
+     </div>
+    <div class="custom" id="custom">
+
+      <div class="custom-image js-custom-image"
            style="background-image: url('../img/png/kevlar.png')">
         <i class="far fa-dot-circle opt-focus js-focus nkp-man is-active"></i>
         <i class="far fa-dot-circle opt-focus js-focus nkp-col"></i>
@@ -354,20 +355,26 @@
         <i class="far fa-dot-circle opt-focus js-focus nkp-fe"></i>
       </div>
     
-      <div class="custom-details">
-        <div class="custom-part js-part  is-active">
+      <div class="custom-details js-custom">
+        <!-- close button hidden in laptop mode -->
+        <button class="custom-close js-custom-close">
+          <i class="fas fa-times"></i>
+        </button>
+
+
+        <div class="custom-part js-part is-active">
           <h4>Manchons</h4>
 
-          <h5>Standard</h5>
           <div class="custom-options">
+          <div>Standard</div>
             <div class="fiche">
               <img class="fiche-image" src="../img/options/man-lat.jpg" alt="">
               <p class="fiche-text">Latex heavy duty</p>
             </div>
           </div>
 
-          <h5>Options</h5>
           <div class="custom-options">
+          <div>Options</div>
             <div class="fiche">
               <img class="fiche-image" src="../img/options/man-neo.jpg" alt="">
               <p class="fiche-text">Néoprène 4mm</p>
@@ -383,16 +390,17 @@
 
         <div class="custom-part js-part">
           <h4>Collerette</h4>
-          <h5>Standard</h5>
+
           <div class="custom-options">
+            <h6>Standard</h6>
             <div class="fiche">
               <img class="fiche-image" src="../img/options/col-lat.jpg" alt="">
               <p class="fiche-text">Latex</p>
             </div>
           </div>
 
-          <h5>Options</h5>
           <div class="custom-options">
+            <h6>Options</h6>
             <div class="fiche">
               <img class="fiche-image" src="../img/options/col-neo.jpg" alt="">
               <p class="fiche-text">Néoprène</p>
@@ -408,16 +416,17 @@
 
         <div class="custom-part js-part">
           <h4>Inflateur</h4>
-          <h5>Standard</h5>
+
           <div class="custom-options">
+            <h6>Standard</h6>
             <div class="fiche">
               <img class="fiche-image" src="../img/options/inf-apeks.jpg" alt="">
               <p class="fiche-text">Apeks</p>
             </div>
           </div>
 
-          <h5>Options</h5>
           <div class="custom-options">
+            <h6>Options</h6>
             <div class="fiche">
               <img class="fiche-image" src="../img/options/inf-sitech.jpg" alt="">
               <p class="fiche-text">Si Tech</p>
@@ -437,16 +446,17 @@
 
         <div class="custom-part js-part">
           <h4>Purge</h4>
-          <h5>Standard</h5>
+
           <div class="custom-options">
+            <h6>Standard</h6>
             <div class="fiche">
               <img class="fiche-image" src="../img/options/purge-apeks-hp.jpg" alt="">
               <p class="fiche-text">Apeks auto dump valve</p>
             </div>
           </div>
 
-          <h5>Options</h5>
           <div class="custom-options">
+            <h6>Options</h6>
             <div class="fiche">
               <img class="fiche-image" src="../img/options/purge-apeks-lp.jpg" alt="">
               <p class="fiche-text">Apeks low profile</p>
@@ -462,16 +472,17 @@
 
         <div class="custom-part js-part">
           <h4>Cagoule</h4>
-          <h5>Standard</h5>
+
           <div class="custom-options">
+            <h6>Standard</h6>
             <div class="fiche">
               <img class="fiche-image" src="../img/options/none.png" alt="">
               <p class="fiche-text">Amovible</p>
             </div>
           </div>
 
-          <h5>Options</h5>
           <div class="custom-options">
+            <h6>Options</h6>
             <div class="fiche">
               <img class="fiche-image" src="../img/options/none.png" alt="">
               <p class="fiche-text">Attenante</p>
@@ -483,16 +494,17 @@
 
         <div class="custom-part js-part">
           <h4>P-Valve</h4>
-          <h5>Standard</h5>
+
           <div class="custom-options">
+            <h6>Standard</h6>
             <div class="fiche">
               <img class="fiche-image" src="../img/options/none.png" alt="">
               <p class="fiche-text">Aucune</p>
             </div>
           </div>
 
-          <h5>Options</h5>
           <div class="custom-options">
+            <h6>Options</h6>
             <div class="fiche">
               <img class="fiche-image" src="../img/options/p-sft.jpg" alt="">
               <p class="fiche-text">SF Tech</p>
@@ -508,16 +520,17 @@
 
         <div class="custom-part js-part">
           <h4>Boots</h4>
-          <h5>Standard</h5>
+
           <div class="custom-options">
+            <h6>Standard</h6>
             <div class="fiche">
               <img class="fiche-image" src="../img/options/boots.jpg" alt="">
               <p class="fiche-text">Boots renforcées</p>
             </div>
           </div>
 
-          <h5>Options</h5>
           <div class="custom-options">
+            <h6>Options</h6>
             <div class="fiche">
               <img class="fiche-image" src="../img/options/teckna.jpg" alt="">
               <p class="fiche-text">Boots légère</p>
@@ -537,16 +550,17 @@
 
         <div class="custom-part js-part">
           <h4>Poches</h4>
-          <h5>Standard</h5>
+
           <div class="custom-options">
+            <h6>Standard</h6>
             <div class="fiche">
               <img class="fiche-image" src="../img/options/none.png" alt="">
               <p class="fiche-text">Aucune</p>
             </div>
           </div>
 
-          <h5>Options</h5>
           <div class="custom-options">
+            <h6>Options</h6>
             <div class="fiche">
               <img class="fiche-image" src="../img/options/pocket-right.jpg" alt="">
               <p class="fiche-text">Poche droite</p>
@@ -566,16 +580,17 @@
 
         <div class="custom-part js-part">
           <h4>Fermeture éclair</h4>
-          <h5>Standard</h5>
+
           <div class="custom-options">
+            <h6>Standard</h6>
             <div class="fiche">
               <img class="fiche-image" src="../img/options/zip-ykk.jpg" alt="">
               <p class="fiche-text">YKK métal</p>
             </div>
           </div>
 
-          <h5>Options</h5>
           <div class="custom-options">
+            <h6>Options</h6>
             <div class="fiche">
               <img class="fiche-image" src="../img/options/tzip.jpg" alt="">
               <p class="fiche-text">Fermeture plastique</p>
@@ -604,7 +619,7 @@
 
       <div class="content-column content-top">
           <div class="content-left clearfix">
-            <h5>Données techniques</h5>
+            <h6>Données techniques</h6>
             <ul>
               <li><strong>Couche imperméable:</strong> Néoprène hyper-compressé 2mm</li>
               <li><strong>Tissus extérieur (Kevlar):</strong> Kevlar, nylon, spandex</li>
@@ -622,7 +637,7 @@
 
       <div class="content-column content-top">
           <div>
-            <h5>Caractéristiques</h5>
+            <h6>Caractéristiques</h6>
               <li>Fermeture frontale ou dorsale</li>
               <li>Torse télescopique facilitant l’habillage</li>
               <li>Fermeture éclair YKK en métal</li>
@@ -684,6 +699,5 @@
 <!-- #SCRIPT
   ------------------------------------------------------------------>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src='../js/script.js'></script>
-
+  <script src='../js/script.js'  type='text/javascript'></script>
   </html>

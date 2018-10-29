@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	// Option viewer
+	// Custom Options
 	// -------------------------------------------------------
 
   // The list of focus and the list of parts should be in the 
@@ -10,23 +10,40 @@ $(document).ready(function() {
 	var object = $("#custom");
 
   // When a icon element is clicked
-  object.children().on('click','i', function(){
-	  // Remove the 'is-active' class from all elements to the siblings'
+  object.find('.js-custom-image').on('click','i', function(){
+		// Disable scroll on the background
+		$("body").addClass("modal-open");
+
+	  // Remove the 'is-active' class from all siblings elements'
 	  object.find('.is-active').removeClass('is-active');
+
+  	// Display the popup
+		object.find('.js-custom').addClass('is-open');
+
 	  // Add class 'is-active' to the element
 	  $(this).addClass('is-active');
 
 	  // Get the index of the element clicked
-	  // var n = $(this).index('.opt-focus');
+	  var n = $(this).index('.js-focus');
 
 	  // Add class to the corresponding element of the part section
-		object.find('.js-part').eq( $(this).index('.js-focus') ).addClass("is-active");
+		object.find('.js-part').eq(n).addClass("is-active");
 	});
 
 
 
+	// Close the popup window
+	// -------------------------------------------------------
+  object.find('.js-custom-close').click(function(){
+  	// Close the popup
+		object.find('.js-custom').removeClass('is-open');
+		// Enable scroll on the background
+		$("body").removeClass("modal-open");
+  });
 
-	// Display th elements of the menu	
+
+
+	// Change the size of the logo when the window is scrolled
 	// -------------------------------------------------------
 		$(window).on('scroll', function () {
 	    var scrollTop = $(window).scrollTop();
@@ -53,6 +70,8 @@ $(document).ready(function() {
 		//	- remove all the active elements
 		if ($(this).hasClass("is-active")) {
 			nav.find(".is-active").removeClass("is-active");
+			// Enable scroll on the background
+			$("body").removeClass("modal-open");
 		}
 
 		// else
@@ -61,6 +80,8 @@ $(document).ready(function() {
 		else {
 			$(this).addClass("is-active");
 			nav.children('ul').addClass("is-active");
+			// Disable scroll on the background
+			$("body").addClass("modal-open");
 		}
 	});
 
