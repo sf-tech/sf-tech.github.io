@@ -444,7 +444,10 @@ p {
 
 .container {
   width: 100%;
-  padding: 2rem; }
+  padding-top: 3em;
+  padding-bottom: 3em;
+  padding-left: 2rem;
+  padding-right: 2rem; }
 
 .wrapper {
   max-width: 1200px;
@@ -999,10 +1002,11 @@ body.modal-open {
 .data-group {
   margin: 0 auto;
   text-align: center;
-  width: 200px; }
+  max-width: 200px; }
 
 .data-icon {
-  height: 100px; }
+  height: 80px;
+  padding-bottom: 1rem; }
   .data-icon img {
     height: 100%;
     width: 100%; }
